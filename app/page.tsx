@@ -1,7 +1,7 @@
 import { Suspense, use } from "react";
 
 import { MapFilterItems } from "./components/MapFilterItems";
-import prisma from "./lib/db";
+import {prisma} from "./lib/db";
 import { SkeltonCard } from "./components/SkeletonCard";
 import { NoItems } from "./components/NoItem";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -96,7 +96,7 @@ async function ShowItems({
         />
       ) : (
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
-          {data.map((item) => (
+          {data.map((item:any) => (
             <ListingCard
               key={item.id}
               description={item.description as string}

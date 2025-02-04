@@ -1,5 +1,5 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import prisma from "../lib/db";
+import {prisma } from "../lib/db";
 import { redirect } from "next/navigation";
 import { NoItems } from "../components/NoItem";
 import { ListingCard } from "../components/ListingCard";
@@ -53,7 +53,7 @@ export default async function MyHomes() {
         />
       ) : (
         <div className="grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 gap-8 mt-8">
-          {data.map((item) => (
+          {data.map((item:any) => (
             <ListingCard
               key={item.id}
               imagePath={item.photo as string}
