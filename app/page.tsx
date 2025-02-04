@@ -25,7 +25,7 @@ async function getData({
   const data = await prisma.home.findMany({
     where: {
       addedCategory: true,
-      addedLoaction: true,
+      addedLocation: true,
       addedDescription: true,
       categoryName: searchParams?.filter ?? undefined,
       country: searchParams?.country ?? undefined,

@@ -12,7 +12,7 @@ async function getData(userId: string) {
       userId: userId,
       addedCategory: true,
       addedDescription: true,
-      addedLoaction: true,
+      addedLocation: true,
     },
     select: {
       id: true,
