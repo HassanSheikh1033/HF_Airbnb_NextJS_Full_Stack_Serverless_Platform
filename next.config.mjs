@@ -3,17 +3,21 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "pypjkgawoihjghosiuab.supabase.co",
         protocol: "https",
-        port: "",
+        hostname: "pypjkgawoihjghosiuab.supabase.co",
+        pathname: "/**", 
       },
       {
-        hostname: "pypjkgawoihjghosiuab.supabase.co",
         protocol: "https",
-        port: "",
+        hostname: "a0.muscache.com",
+        pathname: "/**", 
       },
     ],
   },
 };
 
 export default nextConfig;
+
+
+
+
